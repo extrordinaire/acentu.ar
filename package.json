@@ -16,6 +16,7 @@
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-node": "^1.2.2",
 		"@sveltejs/kit": "^1.5.0",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
@@ -37,6 +38,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@material/web": "1.0.0-pre.3"
+		"@material/web": "1.0.0-pre.3",
+		"dotenv": "^16.0.3"
 	}
 }
