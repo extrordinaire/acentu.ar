@@ -1,7 +1,11 @@
 <script lang="ts">
-import '@material/web/button/outlined-button';
-import '@material/web/button/text-link-button';
-import '@material/web/iconbutton/standard-link-icon-button';
+import { onMount } from 'svelte/internal';
+
+onMount(async () => {
+	await import('@material/web/button/outlined-button');
+	await import('@material/web/button/text-link-button');
+	await import('@material/web/iconbutton/standard-link-icon-button');
+});
 
 import Telegram from '$lib/assets/icons8-telegram-app-48.svg';
 import Twitter from '$lib/assets/icons8-twitter.svg';

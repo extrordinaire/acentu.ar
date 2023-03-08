@@ -1,7 +1,11 @@
 <script lang="ts">
-import '@material/web/button/outlined-button';
-import '@material/web/button/text-link-button';
-import '@material/web/iconbutton/standard-link-icon-button';
+import { onMount } from 'svelte/types/runtime/internal/lifecycle';
+
+onMount(async () => {
+	await import('@material/web/button/outlined-button');
+	await import('@material/web/button/text-link-button');
+	await import('@material/web/iconbutton/standard-link-icon-button');
+});
 
 import Telegram from '$lib/assets/icons8-telegram-app-48.svg';
 import Twitter from '$lib/assets/icons8-twitter.svg';
@@ -50,10 +54,10 @@ u {
 }
 </style>
 
-<div class="flex justify-center items-center w-screen">
+<div class="flex w-screen items-center justify-center">
 	<section
 		aria-label="Contenido principal"
-		class="main flex flex-col h-screen max-w-4/5 w-2/3 py-10 ">
+		class="main max-w-4/5 flex h-screen w-2/3 flex-col py-10 ">
 		<nav class="flex items-center space-x-10 font-fira text-lg">
 			<i class="material-icons" style="font-size: 2rem;">explore</i>
 
@@ -72,7 +76,7 @@ u {
 			></md-text-link-button>
 		</nav>
 
-		<div class="contact flex items-center space-x-10 my-12">
+		<div class="contact my-12 flex items-center space-x-10">
 			<h1 class="font-alfa text-5xl"><u>Maximo Angel Verzini Davico</u></h1>
 
 			<md-standard-link-icon-button linkhref="https://linkedin.com/in/maximovv">
