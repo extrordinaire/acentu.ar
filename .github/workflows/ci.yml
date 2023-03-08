@@ -50,7 +50,7 @@ jobs:
           host: ${{secrets.HOST}}
           username: ${{secrets.USERNAME}}
           key: "${{secrets.SSHKEY}}"
-          source: ".svelte-kit/output/*"
+          source: ".svelte-kit/output/"
           target: ".acentu.ar/"
           rm: true
 
