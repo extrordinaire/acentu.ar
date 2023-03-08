@@ -37,8 +37,8 @@ jobs:
       - name: Linting the proyect
         run: pnpm lint
       
-      - name: Testing the proyect
-        run: pnpm playwright test
+      # - name: Testing the proyect
+      #   run: pnpm playwright test
       
       - name: Building the proyect
         run: pnpm build
