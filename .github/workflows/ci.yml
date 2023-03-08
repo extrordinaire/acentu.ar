@@ -44,8 +44,9 @@ jobs:
           host: ${{secrets.HOST}}
           username: ${{secrets.USERNAME}}
           key: "${{secrets.SSHKEY}}"
-          source: "./.svelte-kit/output/"
+          source: "./.svelte-kit"
           target: "./acentu.ar3/"
+          strip_components: 2
           rm: true
 
 
