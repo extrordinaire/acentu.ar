@@ -49,10 +49,12 @@ jobs:
       - name: Copying the files via SSH
         uses: appleboy/scp-action@master
         with:
-          host: 181.171.89.84 
-          #host: ${{secrets.HOST}}
-          username: acentuar
-          key: $env.KEY
+          #host: 181.171.89.84 
+          host: ${{secrets.HOST}}
+          #username: acentuar
+          username: ${{secrets.USERNAME}}
+          #key: $env.KEY
+          key: ${{secrets.SSHKEY}}
           #password: $env.PASSWORD
           source: ".*"
           target: ".acentu.ar/"
