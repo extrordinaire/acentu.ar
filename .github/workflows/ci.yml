@@ -13,14 +13,12 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   CI:
     runs-on: ubuntu-latest
-    env:
-      key1: ${{ secrets.KEY }}
 
     steps:
       - uses: actions/checkout@master
 
       - name: Debugging
-        run: echo " ${{ secrets.KEY }} " && echo $key1
+        run: echo " $secrets.KEY "
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
