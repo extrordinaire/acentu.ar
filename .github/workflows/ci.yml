@@ -44,7 +44,7 @@ jobs:
           host: ${{secrets.HOST}}
           username: ${{secrets.USERNAME}}
           key: "${{secrets.SSHKEY}}"
-          source: "./build"
+          source: "./build,./node_modules,./package.json"
           target: "./acentu.ar/"
           rm: true
 
