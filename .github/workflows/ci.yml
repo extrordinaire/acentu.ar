@@ -1,0 +1,58 @@
+name: acentu.ar CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  CI:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+      
+      - name: Set up npm
+        uses: actions/setup-node@v3
+        with:
+          version: 16.x
+          cache: "pnpm"
+      
+      - name: Installing frozen lock-file
+        run: pnpm install --frozen-lockfile
+      
+      - name: Formatting the project
+        run: pnpm format
+
+      - name: Linting the proyect
+        run: pnpm lint
+      
+      - name: Testing the proyect
+        run: pnpm playwright test
+      
+      - name: Building the proyect
+        run: pnpm build
+
+      - name: Copying the files via SSH
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER}}
+          key: ${{ secrets.KEY }}
+          source: "build/"
+          target: "acentu.ar/"
+          rm: true
+
+
+
+        
