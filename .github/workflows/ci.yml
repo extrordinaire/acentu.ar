@@ -31,7 +31,7 @@ jobs:
       
       - name: Installing frozen lock-file
         run: pnpm install --frozen-lockfile
-        
+      
       # - name: Testing the proyect
       #   run: pnpm playwright test
       
@@ -44,8 +44,8 @@ jobs:
           host: ${{secrets.HOST}}
           username: ${{secrets.USERNAME}}
           key: "${{secrets.SSHKEY}}"
-          source: ".svelte-kit/output"
-          target: ".acentu.ar/"
+          source: "./.svelte-kit/output/*"
+          target: "./acentu.ar/"
           rm: true
 
 
