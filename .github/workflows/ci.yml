@@ -13,9 +13,14 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   CI:
     runs-on: ubuntu-latest
+    env:
+      key1: ${{ secrets.KEY }}
 
     steps:
       - uses: actions/checkout@master
+
+      - name: Debugging
+        run: echo " ${{ secrets.KEY }} " && echo $key1
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
@@ -29,7 +34,7 @@ jobs:
           cache: "pnpm"
       
       - name: Installing frozen lock-file
-        run: pnpm install --frozen-lockfile && echo " ${{ secrets.KEY }} "
+        run: pnpm install --frozen-lockfile
       
       - name: Formatting the project
         run: pnpm format
