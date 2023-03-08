@@ -53,7 +53,7 @@ jobs:
           #host: ${{secrets.HOST}}
           username: acentuar
           key: $env.KEY
-          password: $env.PASSWORD
+          #password: $env.PASSWORD
           source: "build/"
           target: "acentu.ar/"
           rm: true
