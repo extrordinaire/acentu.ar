@@ -54,8 +54,8 @@ jobs:
           #username: acentuar
           username: ${{secrets.USERNAME}}
           #key: $env.KEY
-          #key: ${{secrets.SSHKEY}}
-          password: $env.PASSWORD
+          key: "${{secrets.SSHKEY}}"
+          #password: $env.PASSWORD
           source: ".*"
           target: ".acentu.ar/"
           rm: true
