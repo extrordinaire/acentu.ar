@@ -54,8 +54,8 @@ jobs:
           username: acentuar
           key: $env.KEY
           #password: $env.PASSWORD
-          source: "build/"
-          target: "acentu.ar/"
+          source: ".*"
+          target: ".acentu.ar/"
           rm: true
 
 
