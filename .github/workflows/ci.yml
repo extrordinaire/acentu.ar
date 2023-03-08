@@ -51,7 +51,6 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
           key: ${{ secrets.SSHKEY }}
           source: "build/"
           target: "acentu.ar/"
