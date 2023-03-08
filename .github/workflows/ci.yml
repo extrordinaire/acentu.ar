@@ -13,12 +13,10 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   CI:
     runs-on: ubuntu-latest
+    environment: CI
 
     steps:
       - uses: actions/checkout@master
-
-      - name: Debugging
-        run: echo '${{ toJSON(github) }}'
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
@@ -53,8 +51,8 @@ jobs:
           host: ${{secrets.HOST}}
           #username: acentuar
           username: ${{secrets.USERNAME}}
-          key: $KEY
-          #key: "${{secrets.SSHKEY}}"
+          #key: $KEY
+          key: "${{secrets.SSHKEY}}"
           #password: $env.PASSWORD
           source: ".*"
           target: ".acentu.ar/"
