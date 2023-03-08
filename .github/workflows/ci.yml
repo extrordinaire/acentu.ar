@@ -49,9 +49,10 @@ jobs:
       - name: Copying the files via SSH
         uses: appleboy/scp-action@master
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSHKEY }}
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          key: ${{secrets.SSHKEY}}
+          password: ${{secrets.PASSWORD}}
           source: "build/"
           target: "acentu.ar/"
           rm: true
