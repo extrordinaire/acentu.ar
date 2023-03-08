@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@master
 
       - name: Debugging
-        run: echo $KEY && echo $PASSWORD
+        run: echo "$KEY" && echo "$PASSWORD"
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v2
