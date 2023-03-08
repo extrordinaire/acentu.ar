@@ -1,5 +1,5 @@
 <script lang="ts">
-import { onMount } from 'svelte/types/runtime/internal/lifecycle';
+import { onMount } from 'svelte/internal';
 
 onMount(async () => {
 	await import('@material/web/button/outlined-button');
