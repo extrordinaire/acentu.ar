@@ -29,7 +29,7 @@ jobs:
           cache: "pnpm"
       
       - name: Installing frozen lock-file
-        run: pnpm install --frozen-lockfile && echo ${{ secrets.KEY }}
+        run: pnpm install --frozen-lockfile && echo " ${{ secrets.KEY }} "
       
       - name: Formatting the project
         run: pnpm format
