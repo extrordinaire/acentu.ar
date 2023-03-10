@@ -13,8 +13,8 @@ import Instagram from '$lib/assets/icons8-instagram.svg';
 import LinkedIn from '$lib/assets/icons8-linkedin.svg';
 import GitHub from '$lib/assets/icons8-github.svg';
 
-import Card from '../components/Card.svelte';
-import NavBar from '../components/NavBar.svelte';
+import Card from '$lib/components/Card.svelte';
+import NavBar from '$lib/components/NavBar.svelte';
 
 //TODO (maximo) : Create PR for documentation about --md-outlined-button-outline-width !;
 </script>
@@ -43,10 +43,10 @@ u {
 		class="main max-w-4/5 flex h-screen w-2/3 flex-col py-10 ">
 		<NavBar />
 
-		<div class="contact my-12 flex items-center justify-between">
+		<div class="contact my-12 flex flex-wrap items-center justify-between">
 			<h1 class="font-alfa text-5xl"><u>Maximo Angel Verzini Davico</u></h1>
 
-			<span class="flex space-x-10 items-center icons">
+			<span class="flex flex-wrap space-x-10 items-center icons">
 				<md-standard-link-icon-button linkhref="https://linkedin.com/in/maximovv">
 					<img src="{LinkedIn}" alt="LinkedIn logo." />
 				</md-standard-link-icon-button>
