@@ -37,16 +37,16 @@ u {
 }
 </style>
 
-<div class="flex w-screen items-center justify-center">
+<div class="flex h-screen w-screen items-center overflow-hidden justify-center">
 	<section
 		aria-label="Contenido principal"
-		class="main max-w-4/5 flex h-screen w-2/3 flex-col py-10 ">
+		class="main flex h-screen md:max-w-7xl w-full flex-col py-10">
 		<NavBar />
 
 		<div class="contact my-12 flex flex-wrap items-center justify-between">
 			<h1 class="font-alfa text-5xl"><u>Maximo Angel Verzini Davico</u></h1>
 
-			<span class="flex flex-wrap space-x-10 items-center icons">
+			<span class="icons flex flex-wrap items-center space-x-10">
 				<md-standard-link-icon-button linkhref="https://linkedin.com/in/maximovv">
 					<img src="{LinkedIn}" alt="LinkedIn logo." />
 				</md-standard-link-icon-button>

@@ -17,14 +17,15 @@ u {
 }
 </style>
 
-<div class="flex w-screen items-center justify-center">
+<div class="flex w-screen h-screen overflow-clip items-center justify-center">
 	<section
 		aria-label="Contenido principal"
-		class="main max-w-4/5 flex h-screen w-2/3 flex-col py-10 ">
+		class="main flex h-screen md:max-w-7xl w-full flex-col py-10">
 		<NavBar />
-		<div class="flex justify-center items-center mb-44 h-full">
-			<h1 class="font-fira text-8xl">
-				<span class="text-9xl text-rose-500 font-alfa"><u>{$page.status + ':'}</u></span>
+		<div class="flex justify-center items-center h-full">
+			<h1 class="font-fira md:text-8xl text-6xl">
+				<span class="md:text-9xl text-7xl text-rose-500 font-alfa"
+					><u>{$page.status + ':'}</u></span>
 				{$page.error?.message} :(
 			</h1>
 		</div>

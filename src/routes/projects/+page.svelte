@@ -38,7 +38,7 @@ u {
 <div class="flex justify-center items-center w-screen">
 	<section
 		aria-label="Contenido principal"
-		class="main flex flex-col h-screen max-w-4/5 w-2/3 py-10 ">
+		class="main flex h-screen md:max-w-7xl w-full flex-col py-10">
 		<NavBar />
 	</section>
 </div>

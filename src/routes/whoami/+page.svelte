@@ -3,6 +3,7 @@ import { onMount } from 'svelte/internal';
 
 onMount(async () => {
 	await import('@material/web/button/outlined-button');
+	await import('@material/web/button/text-link-button');
 	await import('@material/web/iconbutton/standard-link-icon-button');
 });
 
@@ -24,8 +25,8 @@ import NavBar from '$lib/components/NavBar.svelte';
 }
 
 .icons > * {
-	--md-icon-button-icon-size: 3rem;
-	--_state-layer-size: 4rem;
+	--md-icon-button-icon-size: 2.5rem;
+	--_state-layer-size: 3rem;
 }
 
 u {
@@ -34,18 +35,25 @@ u {
 	-webkit-text-decoration-style: wavy;
 	text-decoration-style: wavy;
 }
+
+@media (min-width: 768px) {
+	.icons > * {
+		--md-icon-button-icon-size: 3rem;
+		--_state-layer-size: 4rem;
+	}
+}
 </style>
 
-<div class="flex w-screen items-center justify-center">
+<div class="flex h-screen w-screen items-center overflow-hidden justify-center">
 	<section
 		aria-label="Contenido principal"
-		class="main max-w-4/5 flex h-screen w-2/3 flex-col py-10 ">
+		class="main flex h-screen md:max-w-7xl w-full flex-col py-10">
 		<NavBar />
 
-		<div class="contact my-12 flex flex-wrap items-center justify-between">
-			<h1 class="font-alfa text-5xl"><u>Maximo Angel Verzini Davico</u></h1>
+		<div class="contact md:my-12 my-6 flex md:flex-row flex-col items-center justify-between">
+			<h1 class="font-alfa md:text-5xl text-xl text-center"><u>Maximo Angel Verzini Davico</u></h1>
 
-			<span class="flex flex-wrap space-x-10 items-center icons">
+			<span class="icons flex flex-wrap items-center place-content-around w-full">
 				<md-standard-link-icon-button linkhref="https://linkedin.com/in/maximovv">
 					<img src="{LinkedIn}" alt="LinkedIn logo." />
 				</md-standard-link-icon-button>
