@@ -24,7 +24,7 @@ import NavBar from '../components/NavBar.svelte';
 	@apply bg-slate-50;
 }
 
-.contact > * {
+.icons > * {
 	--md-icon-button-icon-size: 3rem;
 	--_state-layer-size: 4rem;
 }
@@ -43,28 +43,26 @@ u {
 		class="main max-w-4/5 flex h-screen w-2/3 flex-col py-10 ">
 		<NavBar />
 
-		<div class="contact my-12 flex items-center space-x-10">
+		<div class="contact my-12 flex items-center justify-between">
 			<h1 class="font-alfa text-5xl"><u>Maximo Angel Verzini Davico</u></h1>
 
-			<md-standard-link-icon-button linkhref="https://linkedin.com/in/maximovv">
-				<img src="{LinkedIn}" alt="LinkedIn logo." />
-			</md-standard-link-icon-button>
-
-			<md-standard-link-icon-button linkhref="https://instagram.com/maximo_avd">
-				<img src="{Instagram}" alt="Instagram logo." />
-			</md-standard-link-icon-button>
-
-			<md-standard-link-icon-button linkhref="https://t.me/maximo_fsd">
-				<img src="{Telegram}" alt="Telegram logo." />
-			</md-standard-link-icon-button>
-
-			<md-standard-link-icon-button linkhref="https://twitter.com/xtrordinerdev">
-				<img src="{Twitter}" alt="Twitter logo." />
-			</md-standard-link-icon-button>
-
-			<md-standard-link-icon-button linkhref="https://github.com/extrordinaire">
-				<img src="{GitHub}" alt="Github logo." />
-			</md-standard-link-icon-button>
+			<span class="flex space-x-10 items-center icons">
+				<md-standard-link-icon-button linkhref="https://linkedin.com/in/maximovv">
+					<img src="{LinkedIn}" alt="LinkedIn logo." />
+				</md-standard-link-icon-button>
+				<md-standard-link-icon-button linkhref="https://instagram.com/maximo_avd">
+					<img src="{Instagram}" alt="Instagram logo." />
+				</md-standard-link-icon-button>
+				<md-standard-link-icon-button linkhref="https://t.me/maximo_fsd">
+					<img src="{Telegram}" alt="Telegram logo." />
+				</md-standard-link-icon-button>
+				<md-standard-link-icon-button linkhref="https://twitter.com/xtrordinerdev">
+					<img src="{Twitter}" alt="Twitter logo." />
+				</md-standard-link-icon-button>
+				<md-standard-link-icon-button linkhref="https://github.com/extrordinaire">
+					<img src="{GitHub}" alt="Github logo." />
+				</md-standard-link-icon-button>
+			</span>
 		</div>
 
 		<div class="flex w-full items-center justify-center">
