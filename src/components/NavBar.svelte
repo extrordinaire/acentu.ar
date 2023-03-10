@@ -1,4 +1,6 @@
 <script lang="ts">
+import { page } from '$app/stores';
+
 interface route {
 	tag: string;
 	destination: string;
@@ -33,11 +35,18 @@ u {
 	<i class="material-icons" style="font-size: 2rem;">explore</i>
 
 	{#each routes as route}
-		<u>
+		{#if $page.url.pathname === route.destination}
+			<u>
+				<md-text-link-button
+					href="{route.destination}"
+					data-sveltekit-preload-data="tap"
+					label="{route.tag}"></md-text-link-button>
+			</u>
+		{:else}
 			<md-text-link-button
 				href="{route.destination}"
 				data-sveltekit-preload-data="tap"
 				label="{route.tag}"></md-text-link-button>
-		</u>
+		{/if}
 	{/each}
 </nav>
