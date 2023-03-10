@@ -1,13 +1,14 @@
 <script lang="ts">
 interface route {
-	[tag: string]: [destination: string];
+	tag: string;
+	destination: string;
 }
 
-const routes = <route>[
-	{ Inicio: '/' },
-	{ '¿Quien soy': '/whoami' },
-	{ Proyectos: '/projects' },
-	{ Contacto: '/contact' }
+const routes: route[] = [
+	{ tag: 'Inicio', destination: '/' },
+	{ tag: '¿Quien soy', destination: '/whoami' },
+	{ tag: 'Proyectos', destination: '/projects' },
+	{ tag: 'Contacto', destination: '/contact' }
 ];
 </script>
 
@@ -31,21 +32,12 @@ u {
 <nav class="flex items-center space-x-10 font-fira text-lg">
 	<i class="material-icons" style="font-size: 2rem;">explore</i>
 
-	<u>
-		<md-text-link-button href="/" data-sveltekit-preload-data="tap" label="Inicio"
-		></md-text-link-button>
-	</u>
-
 	{#each routes as route}
-		route.
+		<u>
+			<md-text-link-button
+				href="{route.destination}"
+				data-sveltekit-preload-data="tap"
+				label="{route.tag}"></md-text-link-button>
+		</u>
 	{/each}
-
-	<md-text-link-button href="/whoami" data-sveltekit-preload-data="tap" label="¿Quien soy?"
-	></md-text-link-button>
-
-	<md-text-link-button href="/proyects" data-sveltekit-preload-data="tap" label="Proyectos"
-	></md-text-link-button>
-
-	<md-text-link-button href="/contact" data-sveltekit-preload-data="tap" label="Contacto"
-	></md-text-link-button>
 </nav>
