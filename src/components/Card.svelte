@@ -27,7 +27,7 @@ section {
 </style>
 
 <section
-	class="relative my-2 mr-2 flex h-full w-full flex-col rounded-md bg-inherit p-6 text-inherit justify-between {clazz}">
+	class="relative my-2 mr-2 flex h-full w-full flex-col rounded-md p-6 justify-between {clazz}">
 	<span>
 		<h2 class="font-alfa text-4xl">
 			<slot name="title" />
