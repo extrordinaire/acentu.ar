@@ -14,15 +14,14 @@ interface route {
 const routes: route[] = [
 	{ tag: 'Inicio', destination: '/' },
 	{ tag: '¿Quien soy?', destination: '/whoami' },
-	{ tag: 'Proyectos', destination: '/projects' },
-	{ tag: 'Contacto', destination: '/contact' }
+	{ tag: 'Documentación', destination: '/docs' }
 ];
 </script>
 
 <style lang="postcss">
 nav {
 	--md-text-button-container-shape: 0.375rem;
-	--md-text-button-label-text-type: 800 1rem/1rem Fira Sans;
+	--md-text-button-label-text-type: 500 1.125rem/2rem Fira Sans;
 	--md-sys-color-primary: #0f172a;
 	--md-sys-color-outline: #f1f5f9;
 	--md-sys-color-on-primary: #f1f5f9;
@@ -35,19 +34,18 @@ u {
 	text-decoration-style: wavy;
 }
 
-@media (min-width: 768px) {
+/* @media (max-width: 768px) {
 	nav {
-		--md-text-button-container-shape: 0.375rem;
-		--md-text-button-label-text-type: 500 1.125rem/2rem Fira Sans;
-		--md-sys-color-primary: #0f172a;
-		--md-sys-color-outline: #f1f5f9;
-		--md-sys-color-on-primary: #f1f5f9;
-	}
-}
+	--md-text-button-container-shape: 0.375rem;
+	--md-text-button-label-text-type: 800 1rem/1rem Fira Sans;
+	--md-sys-color-primary: #0f172a;
+	--md-sys-color-outline: #f1f5f9;
+	--md-sys-color-on-primary: #f1f5f9;
+} */
 </style>
 
-<nav class="flex items-center md:space-x-10 md:space-x-2 font-fira">
-	<i class="material-icons md:w-8 md:visible w-0 invisible" style="font-size: 2rem;">explore</i>
+<nav class="flex items-center space-x-10 font-fira">
+	<i class="material-icons-outlined w-2" style="font-size: 1.5rem;">explore</i>
 
 	<span class="flex md:flex-nowrap flex-wrap place-content-baseline">
 		{#each routes as route}

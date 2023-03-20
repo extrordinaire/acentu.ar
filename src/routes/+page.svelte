@@ -7,14 +7,17 @@ onMount(async () => {
 	await import('@material/web/iconbutton/standard-link-icon-button');
 });
 
-import Telegram from '$lib/assets/icons8-telegram-app-48.svg';
-import Twitter from '$lib/assets/icons8-twitter.svg';
-import Instagram from '$lib/assets/icons8-instagram.svg';
-import LinkedIn from '$lib/assets/icons8-linkedin.svg';
-import GitHub from '$lib/assets/icons8-github.svg';
+import Telegram from '$lib/assets/Telegram.svg';
+import Twitter from '$lib/assets/Twitter.svg';
+import Instagram from '$lib/assets/Instagram.svg';
+import LinkedIn from '$lib/assets/LinkedIn.svg';
+import GitHub from '$lib/assets/GitHub.svg';
+import Acentuar from '$lib/assets/favicon.svg';
 
 import Card from '$lib/components/Card.svelte';
 import NavBar from '$lib/components/NavBar.svelte';
+
+import waves_0 from '$lib/assets/waves_0.svg';
 
 //TODO (maximo) : Create PR for documentation about --md-outlined-button-outline-width !;
 </script>
@@ -35,90 +38,69 @@ u {
 	-webkit-text-decoration-style: wavy;
 	text-decoration-style: wavy;
 }
+
+b {
+	@apply h-5 font-bold;
+}
 </style>
 
-<div class="flex h-screen w-screen items-center overflow-hidden justify-center">
+<div class="flex h-screen w-screen items-center justify-center overflow-hidden">
 	<section
 		aria-label="Contenido principal"
-		class="main flex h-screen md:max-w-7xl w-full flex-col py-10">
+		class="main mt-10 flex h-screen max-w-sm flex-col px-5 md:max-w-7xl ">
 		<NavBar />
 
-		<div class="contact my-12 flex flex-wrap items-center justify-between">
-			<h1 class="font-alfa text-5xl"><u>Maximo Angel Verzini Davico</u></h1>
+		<img src="{Acentuar}" alt="acentuar logo" class="h-28" />
 
-			<span class="icons flex flex-wrap items-center space-x-10">
-				<md-standard-link-icon-button linkhref="https://linkedin.com/in/maximovv">
-					<img src="{LinkedIn}" alt="LinkedIn logo." />
-				</md-standard-link-icon-button>
-				<md-standard-link-icon-button linkhref="https://instagram.com/maximo_avd">
-					<img src="{Instagram}" alt="Instagram logo." />
-				</md-standard-link-icon-button>
-				<md-standard-link-icon-button linkhref="https://t.me/maximo_fsd">
-					<img src="{Telegram}" alt="Telegram logo." />
-				</md-standard-link-icon-button>
-				<md-standard-link-icon-button linkhref="https://twitter.com/xtrordinerdev">
-					<img src="{Twitter}" alt="Twitter logo." />
-				</md-standard-link-icon-button>
-				<md-standard-link-icon-button linkhref="https://github.com/extrordinaire">
-					<img src="{GitHub}" alt="Github logo." />
-				</md-standard-link-icon-button>
-			</span>
+		<h1 class="font-alfa text-xl text-slate-900">Maximo Angel Verzini Davico</h1>
+
+		<div
+			class="flex my-8 h-12 w-auto items-center rounded-lg border-2 border-slate-900 px-5 text-lg text-slate-900">
+			<i class="material-icons" style="font-size: 1.5rem;">search</i>
+			<input
+				type="text"
+				class="flex-grow bg-transparent px-4 py-2 text-slate-900 focus:outline-0"
+				placeholder="{'Search packages'}" />
+			<span class="h-6 w-0.5 bg-slate-900"> </span>
+			<i class="material-icons ml-5" style="font-size: 1.5rem;">tune</i>
 		</div>
 
-		<div class="flex w-full items-center justify-center">
-			<Card
-				button="¡Ilústrame!"
-				callBack="{() => {
-					console.log('pepe');
-				}}"
-				class="bg-rose-500">
-				<h2 class="font-alfa text-4xl text-slate-50" slot="title">
-					Diseño
-					<i class="material-icons" style="font-size: 2rem;">palette</i>
-				</h2>
-				<p class="font-fira text-xl text-slate-50">
-					Planificamos la nave espacial para que se vea atractiva y sea fácil de usar, pero sin
-					comprometer la seguridad ni la funcionalidad. Ahora bien, si algún usuario termina
-					comiendo <a href="/pochoclos" class="underline">pochoclos</a> de más, no podemos hacernos responsables
-					de sus decisiones.
+		<section class="grid h-full w-full max-h-40 justify-self-end">
+			<div
+				class="z-10 col-span-full row-span-full h-6 w-full self-start"
+				style="
+					background: url({waves_0}) center top repeat-x; 
+				">
+			</div>
+			<div
+				class="col-span-full row-span-full flex flex-col justify-around mt-6 h-full w-full bg-slate-800 px-6 pt-8 pb-12 text-slate-50">
+				<p>
+					<b>Ready, set, snap!</b> Get a good look of the awesomeness I share through my social media.
+					Let's connect and sail together!
 				</p>
-			</Card>
-
-			<Card
-				button="¡Manos a la obra!"
-				callBack="{() => {
-					console.log('¡Manos a la obra!');
-				}}"
-				class="bg-amber-500">
-				<h2 class="font-alfa text-4xl text-slate-50" slot="title">
-					Desarrollo
-					<i class="material-icons" style="{'font-size: 2rem;'}">construction</i>
-				</h2>
-				<p class="font-fira text-xl text-slate-50">
-					Construimos una nave espacial, pero en lugar de viajar al espacio y enfrentarse a peligros
-					cósmicos, llevamos al usuario en un viaje digital seguro y emocionante, ¡con toda la
-					diversión y sin espaguetización!
-				</p>
-			</Card>
-
-			<Card
-				button="¡Llévame al espacio!"
-				callBack="{() => {
-					console.log('¡Llévame al espacio!');
-				}}"
-				class="bg-teal-500">
-				<h2 class="font-alfa text-4xl text-slate-50" slot="title">
-					Despliegue
-					<i class="material-icons" style="{'font-size: 2rem;'}">rocket_launch</i>
-				</h2>
-				<p class="font-fira text-xl text-slate-50">
-					Enviamos una nave espacial, pero en lugar enviarla al espacio exterior, la enviamos al
-					cliente, para que pueda llevar a sus usuarios en un viaje intergaláctico desde la
-					comodidad de sus casas, sin riesgos de agujeros negros ni microondas locos. ¡Y sí, también
-					entregamos <a href="/pochoclos" class="underline">pochoclos</a> virtuales para completar la
-					experiencia!
-				</p>
-			</Card>
-		</div>
+				<section class="no-wrap flex h-full w-full flex-col items-center justify-center space-y-2">
+					<span class="icons flex max-w-fit flex-wrap place-content-around items-center space-x-4">
+						<md-standard-link-icon-button linkhref="https://linkedin.com/in/maximovv">
+							<img src="{LinkedIn}" alt="LinkedIn logo." />
+						</md-standard-link-icon-button>
+						<md-standard-link-icon-button linkhref="https://instagram.com/maximo_avd">
+							<img src="{Instagram}" alt="Instagram logo." />
+						</md-standard-link-icon-button>
+						<md-standard-link-icon-button linkhref="https://t.me/maximo_fsd">
+							<img src="{Telegram}" alt="Telegram logo." />
+						</md-standard-link-icon-button>
+					</span>
+					<span class="icons flex max-w-fit flex-wrap place-content-around items-center space-x-4">
+						<md-standard-link-icon-button linkhref="https://twitter.com/xtrordinerdev">
+							<img src="{Twitter}" alt="Twitter logo." />
+						</md-standard-link-icon-button>
+						<md-standard-link-icon-button linkhref="https://github.com/extrordinaire">
+							<img src="{GitHub}" alt="Github logo." />
+						</md-standard-link-icon-button>
+					</span>
+				</section>
+				<p class="font-thin italic">Pssst... Down here got something for you</p>
+			</div>
+		</section>
 	</section>
 </div>

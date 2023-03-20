@@ -44,16 +44,16 @@ u {
 }
 </style>
 
-<div class="flex h-screen w-screen items-center overflow-hidden justify-center">
+<div class="flex h-screen w-screen items-center justify-center overflow-hidden">
 	<section
 		aria-label="Contenido principal"
-		class="main flex h-screen md:max-w-7xl w-full flex-col py-10">
+		class="main flex h-screen w-full flex-col py-10 md:max-w-7xl">
 		<NavBar />
 
-		<div class="contact md:my-12 my-6 flex md:flex-row flex-col items-center justify-between">
-			<h1 class="font-alfa md:text-5xl text-xl text-center"><u>Maximo Angel Verzini Davico</u></h1>
+		<div class="contact my-6 flex flex-col items-center justify-between md:my-12 md:flex-row">
+			<h1 class="text-center font-alfa text-xl md:text-5xl"><u>Maximo Angel Verzini Davico</u></h1>
 
-			<span class="icons flex flex-wrap items-center place-content-around w-full">
+			<span class="icons flex w-full flex-wrap place-content-around items-center">
 				<md-standard-link-icon-button linkhref="https://linkedin.com/in/maximovv">
 					<img src="{LinkedIn}" alt="LinkedIn logo." />
 				</md-standard-link-icon-button>
