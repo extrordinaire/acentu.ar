@@ -13,7 +13,6 @@ interface route {
 
 const routes: route[] = [
 	{ tag: 'Inicio', destination: '/' },
-	{ tag: '¿Quien soy?', destination: '/whoami' },
 	{ tag: 'Documentación', destination: '/docs' }
 ];
 </script>
@@ -44,10 +43,10 @@ u {
 } */
 </style>
 
-<nav class="flex items-center space-x-10 font-fira">
+<nav class="flex items-center space-x-10 font-fira w-full">
 	<i class="material-icons-outlined w-2" style="font-size: 1.5rem;">explore</i>
 
-	<span class="flex md:flex-nowrap flex-wrap place-content-baseline">
+	<span class="flex md:flex-nowrap flex-wrap place-content-baseline w-full">
 		{#each routes as route}
 			{#if $page.url.pathname === route.destination}
 				<u>
