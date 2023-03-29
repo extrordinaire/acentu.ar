@@ -7,12 +7,6 @@ onMount(async () => {
 	await import('@material/web/iconbutton/standard-link-icon-button');
 });
 
-import Telegram from '$lib/assets/icons8-telegram-app-48.svg';
-import Twitter from '$lib/assets/icons8-twitter.svg';
-import Instagram from '$lib/assets/icons8-instagram.svg';
-import LinkedIn from '$lib/assets/icons8-linkedin.svg';
-import GitHub from '$lib/assets/icons8-github.svg';
-
 import NavBar from '$lib/components/NavBar.svelte';
 //TODO (maximo) : Create PR for documentation about --md-outlined-button-outline-width !;
 </script>
